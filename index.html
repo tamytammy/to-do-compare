@@ -6,8 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do Compare</title>
   </head>
+  <style>
+    #app{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #vanilla-js-app, #vue-app {
+      width: 50%;
+      height: 700px;
+      padding: 20px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+    }
+    .todo-list{
+      list-style: none;
+    }
+    .newTodo{
+      padding: .5rem;
+    }
+    .done{
+      text-decoration: line-through;
+    }
+  </style>
   <body>
-    <div id="app"></div>
+  <div id="app">
+
+      <section id="vanilla-js-app">
+      <div id="vanilla-js-root">
+        <h1>Vanilla JS App</h1>
+        <input type="text" id="todo-input" placeholder="Add a new todo" class="newTodo"/>
+        <button type="button" id="add-btn" class="add-btn">Add Todo</button>
+        <ul id="todo-list" class="todo-list">
+          <li class="todo-item" id="todo-item">
+            <input type="checkbox" name="done" id="todo-done" class="todo-done">
+            <label for="todo-done">Test To do</label>
+            <button type="button" class="remove-btn">X</button>
+          </li> 
+        </ul>
+      </div>
+      <script type="module" defer src="/src/vanilla.js"></script>
+      </section>
+
+
+
+    <section id="vue-app">
+      <div id="vue-root">
+        
+      </div>
+    </section>
     <script type="module" src="/src/main.js"></script>
+  </div>
+    
+    
   </body>
 </html>
