@@ -30,6 +30,6 @@
 
 ## 作者資訊
 
-作者：何怡德
-聯絡Email: momo09041027@gmail.com
+- 作者：何怡德
+- 聯絡Email: momo09041027@gmail.com
 
