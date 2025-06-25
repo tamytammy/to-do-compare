@@ -1,30 +1,41 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from 'vue';
+let id = 0
+let todos = ref([]);
+let newTodo = ref('');
+function addTodo() {
+  if (newTodo.value.trim() !== '') {
+    todos.value.push({ id: id++, text: newTodo.value, done: false });
+    newTodo.value = '';
+  }
+}
+function removeTodo(todo) {
+  todos.value = todos.value.filter( t => t.id !== todo.id)
+}
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
+  <h1>Vue App</h1>
+  
+  <input type="text" placeholder="Add new todo!" class="new-todo" v-model="newTodo"/>
+  <button @click="addTodo">Add Todo</button>
+  <ul v-for="todo in todos" class="todo-list">
+    <li class="todo-item">
+      <input type="checkbox" class="todo-done" v-model="todo.done">
+      <label :class="{ done: todo.done }">{{ todo.text }}</label>
+      <button class="remove-btn" @click="removeTodo(todo)">X</button>
+    </li>
+  </ul>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+  .new-todo {
+    padding: .5rem;  
+  }
+  .todo-item{
+    list-style-type: none;
+  }
+  .done{
+    text-decoration: line-through;
+  }
 </style>
