@@ -22,11 +22,11 @@
 
 - 原生 JavaScript
 
-[To-Do App 對照圖](./public/js.png)
+![To-Do App 對照圖](./public/js.png)
 
 - Vue 3
 
-[To-Do App 對照圖](./public/vue.png)
+![To-Do App 對照圖](./public/vue.png)
 
 ## 作者資訊
 
