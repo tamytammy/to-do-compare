@@ -1,4 +1,4 @@
-# 🧠 To-Do Compare: Vue 3 vs Vanilla JavaScript
+# To-Do Compare: Vue 3 vs Vanilla JavaScript
 
 這是一個學習型對照專案，用來比較使用 Vue 3 與原生 JavaScript（Vanilla JS）製作 To-Do App 的差異。
 
@@ -6,7 +6,7 @@
 
 ---
 
-## ✨ 專案特色
+## 專案特色
 
 - ✅ **雙版本並列呈現**：同一頁面中同時展示 Vue 與 JS 的待辦清單
 - ✅ **基本功能一致**：
@@ -17,6 +17,16 @@
 - ✅ 可作為學習 Vue Composition API 與原生 DOM 操作的練習
 
 ---
+
+## 程式碼區別
+
+- 原生 JavaScript
+
+[To-Do App 對照圖](./public/js.png)
+
+- Vue 3
+
+[To-Do App 對照圖](./public/vue.png)
 
 ## 作者資訊
 
