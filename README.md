@@ -18,15 +18,10 @@
 
 ---
 
-## 程式碼區別
+## 心得
 
-- 原生 JavaScript
+- [Medium 心得分享](https://medium.com/@momo09041027/%E5%89%8D%E7%AB%AF-vue-v-s-vanilla-js-to-do-app-439df556403e)
 
-![To-Do App 對照圖](./public/js.png)
-
-- Vue 3
-
-![To-Do App 對照圖](./public/vue.png)
 
 ## 作者資訊
 
